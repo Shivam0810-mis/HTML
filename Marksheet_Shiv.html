@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High School Marksheet</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 30px;
+            background: #f2f2f2;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+        }
+
+        .marksheet {
+            width: 900px;
+            max-width: 100%;
+            margin: auto;
+            background: white;
+            border: 3px solid #222;
+            padding: 25px;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #222;
+            padding-bottom: 15px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+
+        .header h2 {
+            margin: 8px 0;
+            font-size: 20px;
+        }
+
+        .header p {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+
+        .title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .title h3 {
+            display: inline-block;
+            margin: 0;
+            padding: 8px 25px;
+            border: 2px solid #222;
+            font-size: 18px;
+        }
+
+        .student-info {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .student-info td {
+            border: 1px solid #555;
+            padding: 9px;
+            font-size: 14px;
+        }
+
+        .student-info .label {
+            font-weight: bold;
+            width: 18%;
+            background: #eee;
+        }
+
+        .marks-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .marks-table th,
+        .marks-table td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .marks-table th {
+            background: #e5e5e5;
+            font-size: 14px;
+        }
+
+        .marks-table td {
+            font-size: 14px;
+        }
+
+        .marks-table td:nth-child(2) {
+            text-align: left;
+        }
+
+        .summary {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .summary td {
+            border: 1px solid #555;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .summary td:first-child {
+            background: #eee;
+            width: 25%;
+        }
+
+        .result {
+            margin-top: 20px;
+            border: 2px solid #222;
+            padding: 12px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 70px;
+            text-align: center;
+        }
+
+        .signature {
+            width: 200px;
+            border-top: 1px solid #222;
+            padding-top: 8px;
+            font-size: 13px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .marksheet {
+                width: 100%;
+                border: 3px solid #222;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="marksheet">
+
+        <!-- School Header -->
+        <div class="header">
+            <h1>Matrix High School</h1>
+            <h2>HIGH SCHOOL EXAMINATION</h2>
+            <p>Affiliated to the Central Board of Secondary Education</p>
+            <p>School Code: 12345</p>
+        </div>
+
+        <div class="title">
+            <h3>STATEMENT OF MARKS</h3>
+        </div>
+
+        <!-- Student Information -->
+        <table class="student-info">
+            <tr>
+                <td class="label">Student Name</td>
+                <td>Ansh Thomas</td>
+                <td class="label">Roll Number</td>
+                <td>2144569821</td>
+            </tr>
+
+            <tr>
+                <td class="label">Father's Name</td>
+                <td>Mr. Thomas</td>
+                <td class="label">Class</td>
+                <td>10th</td>
+            </tr>
+
+            <tr>
+                <td class="label">Mother's Name</td>
+                <td>Mrs. Thomas</td>
+                <td class="label">Session</td>
+                <td>2019-2020</td>
+            </tr>
+
+            <tr>
+                <td class="label">Date of Birth</td>
+                <td>xx/xx/20xx</td>
+                <td class="label">Exam Year</td>
+                <td>2020</td>
+            </tr>
+        </table>
+
+        <!-- Marks Table -->
+        <table class="marks-table">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Subject</th>
+                    <th>Maximum Marks</th>
+                    <th>Marks Obtained</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>English</td>
+                    <td>100</td>
+                    <td>99</td>
+                    <td>O</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Hindi</td>
+                    <td>100</td>
+                    <td>99</td>
+                    <td>O</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Mathematics</td>
+                    <td>100</td>
+                    <td>99</td>
+                    <td>O</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Science</td>
+                    <td>100</td>
+                    <td></td>
+                    <td>O</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Social Science</td>
+                    <td>100</td>
+                    <td>99</td>
+                    <td>O</td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>Computer Science</td>
+                    <td>100</td>
+                    <td>99</td>
+                    <td>O</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Summary -->
+        <table class="summary">
+            <tr>
+                <td>Total Maximum Marks</td>
+                <td>600</td>
+                <td>Total Marks Obtained</td>
+                <td>594</td>
+            </tr>
+
+            <tr>
+                <td>Percentage</td>
+                <td>99%</td>
+                <td>Overall Grade</td>
+                <td>O</td>
+            </tr>
+        </table>
+
+        <!-- Result -->
+        <div class="result">
+            RESULT: PASS
+        </div>
+
+        <!-- Signatures -->
+        <div class="signature-section">
+            <div class="signature">
+                Class Teacher
+            </div>
+
+            <div class="signature">
+                Principal
+            </div>
+
+            <div class="signature">
+                Examiner
+            </div>
+        </div>
+
+        <div class="footer">
+            This is a computer-generated marksheet.
+        </div>
+
+    </div>
+
+</body>
+
+</html>
