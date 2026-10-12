@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MegaMart</title>
+</head>
+
+<body>
+    <center>
+        <h1>MegaMart</h1>
+        <p>
+            <button onclick="home()">Home</button>
+            <button onclick="about()">About Us</button>
+            <button onclick="cart()">Cart</button>
+        </p>
+        <hr>
+        <div id="page">
+            <h2>Welcome to MegaMart</h2>
+            <p>Shop smart and save more!</p>
+            <marquee>🔥 50% OFF | Free Delivery | Mega Sale 🔥</marquee>
+            <h2>Top Deals</h2>
+
+            <table border="1">
+                <tr>
+
+                    <td>
+                        <center>
+                            <h3>Running Shoes</h3>
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80"
+                                width="150" height="120">
+                            <p>₹1,999</p>
+                            <button>Add to Cart</button>
+                        </center>
+                    </td>
+
+                    <td>
+                        <center>
+                            <h3>Headphones</h3>
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80"
+                                width="150" height="120">
+                            <p>₹2,499</p>
+                            <button>Add to Cart</button>
+                        </center>
+                    </td>
+
+                    <td>
+                        <center>
+                            <h3>Smart Watch</h3>
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80"
+                                width="150" height="120">
+                            <p>₹3,299</p>
+                            <button>Add to Cart</button>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <p>© 2026 MegaMart</p>
+    </center>
+
+    <script>
+        function home() {
+            document.getElementById("page").innerHTML =
+                "<h2>Welcome to MegaMart</h2><p>Shop smart and save more!</p>";
+        }
+
+        function about() {
+            document.getElementById("page").innerHTML =
+                "<h1>About Us</h1><p>MegaMart is an online shopping website that provides quality products at affordable prices.</p><h3>Our Mission</h3><p>To make shopping simple, easy and affordable.</p>";
+        }
+
+        function cart() {
+            let x = window.open("");
+            x.document.write("<center><h1>MegaMart</h1><hr><h2>Shopping Cart</h2><p>Your cart is empty.</p><button>Checkout</button></center>");
+        }
+    </script>
+</body>
+
+</html>
